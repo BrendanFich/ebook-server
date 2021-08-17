@@ -3,6 +3,7 @@ const router = require('./router')
 const fs = require('fs')
 const https = require('https')
 const cors = require('cors')
+const { env } = require('../env')
 
 const app = express()
 
@@ -15,8 +16,9 @@ app.use(express.urlencoded({extended: true}))
 
 app.use('/', router)
 
-const privateKey = fs.readFileSync('./https/5787844_ebook.chenjunjian.com.key')
-const pem = fs.readFileSync('./https/5787844_ebook.chenjunjian.com.pem')
+const keyPath = env === 'dev' ? './https' : '/root/https'
+const privateKey =  fs.readFileSync(keyPath + '/chenjunjian.com.key')
+const pem = fs.readFileSync(keyPath + '/chenjunjian.com.pem')
 const credentials = {
   key: privateKey,
   cert: pem

@@ -1,4 +1,4 @@
-const { env } = require('./env')
+const { env } = require('../env')
 const UPLOAD_PATH =
   env === 'dev'
     ? '../../../ebookUpload/admin-upload-ebook'
@@ -12,6 +12,6 @@ module.exports = {
   PRIVATE_KEY: 'admin_imooc_token_key',
   JWT_EXPRIRED: 60 * 60,
   UPLOAD_PATH,
-  UPLOAD_URL: 'https://ebook.chenjunjian.com/admin-upload-ebook',
+  UPLOAD_URL: 'https://chenjunjian.com/admin-upload-ebook',
   MIME_TYPE_EPUB: 'application/epub+zip'
 }
