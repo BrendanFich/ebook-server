@@ -7,6 +7,7 @@ yarn-debug.log*
 yarn-error.log*
 **/*.log
 https/
+db/config.js
 
 tests/**/coverage/
 tests/e2e/reports
