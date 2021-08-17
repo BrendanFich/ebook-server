@@ -3,7 +3,7 @@ const router = require('./router')
 const fs = require('fs')
 const https = require('https')
 const cors = require('cors')
-const { env } = require('../env')
+const { env } = require('./env')
 
 const app = express()
 
