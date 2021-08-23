@@ -6,7 +6,8 @@
   "scripts": {
     "client": "npm run dev --prefix ./egg-reading-web",
     "server": "nodemon app.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "cross-env NODE_ENV=development node app",
+    "prod": "cross-env NODE_ENV=production node app"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "boom": "^7.3.0",
     "concurrently": "^6.2.0",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "crypto": "^1.0.1",
     "express": "^4.17.1",
     "express-jwt": "^6.0.0",
