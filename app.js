@@ -23,10 +23,6 @@ const credentials = {
   cert: pem
 }
 const httpsServer = https.createServer(credentials, app)
-const server = app.listen(5000, function() {
-  const {address, port} = server.address()
-  console.log('HTTP启动成功：http://localhost:%s', address, port);
-})
 
 httpsServer.listen(18082, function() {
   console.log('HTTPS Server is running on: https://localhost:%s', 18082);
